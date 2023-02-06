@@ -1,0 +1,50 @@
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 20rem;
+    filter: opacity(0.5);
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 1s ease-in-out;
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.2);
+    -webkit-text-fill-color: transparent;
+    animation: fill 0.5s infinite alternate;
+
+    &:hover {
+      color: var(--icons);
+      letter-spacing: 1px;
+      transition: 0.5s;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  span {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    font-size: 8rem;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+    font-weight: 700;
+    transition: 1s ease-in-out;
+    font-family: "Artifika", serif;
+
+    &::before {
+      content: "{";
+      color: var(--green);
+      opacity: 0.6;
+    }
+
+    &::after {
+      content: "}";
+      color: var(--green);
+      opacity: 0.6;
+    }
+  }
+}
+
+
