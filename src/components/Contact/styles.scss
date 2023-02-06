@@ -1,69 +1,122 @@
-.contact-form {
+.contact-page {
   width: 100%;
-  margin-top: 20px;
+  will-change: contents;
+  height: 90%;
+  min-height: 566px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
 
-  ul {
-    padding: 0;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      margin-bottom: 10px;
-      overflow: hidden;
-      display: block;
-      position: relative;
-      opacity: 0;
-      animation: fadeInUp 1s 1s;
-      animation-fill-mode: forwards;
-      clear: both;
-    }
+  .text-zone {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    li.half {
-      width: 49%;
-      margin-left: 2%;
-      float: left;
-      clear: none;
+    .contact-form {
+      width: 100%;
+      margin-top: 9rem;
+      padding: 3rem;
 
-      &:first-child {
-        margin-left: 0;
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          margin-bottom: 10px;
+          overflow: hidden;
+          display: block;
+          position: relative;
+          opacity: 0;
+          animation: fadeInUp 1s 1s;
+          animation-fill-mode: forwards;
+          clear: both;
+        }
+
+        li.half {
+          width: 49%;
+          margin-left: 2%;
+          float: left;
+          clear: none;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        border: 0;
+        color: var(--white);
+        height: 50px;
+        font-size: 16px;
+        padding: 0 20px;
+        box-sizing: border-box;
+
+        background-color: rgb(10 10 10 / 34%);
+        backdrop-filter: blur(23px);
+        border-radius: 6px;
+
+        transition: all 0.5s ease-in-out;
+
+        &:focus {
+          outline-style: none;
+          background-color: rgba(41, 40, 40, 0.34);
+        }
+      }
+
+      textarea {
+        width: 100%;
+        color: var(--white);
+        padding: 20px;
+        min-height: 150px;
+        box-sizing: border-box;
+        resize: none;
+        background-color: rgb(10 10 10 / 34%);
+        backdrop-filter: blur(23px);
+        border-radius: 6px;
+        transition: all 0.5s ease-in-out;
+        border: none;
+
+        &:focus {
+          outline-style: none;
+          background-color: rgba(41, 40, 40, 0.34);
+        }
+      }
+
+      .flat-button {
+        color: var(--green);
+        background: 0 0;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding: 8px 10px;
+        border: 1px solid var(--green);
+        float: right;
+        border-radius: 4px;
+        cursor: pointer;
+
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          background: var(--green);
+          color: black;
+        } 
       }
     }
-  }
-
-  input[type='text'],
-  input[type='email'] {
-    width: 100%;
-    border: 0;
-    background: var(--dark-gray);
-    color: var(--white);
-    height: 50px;
-    font-size: 16px;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-
-  textarea {
-    width: 100%;
-    border: 0;
-    background: var(--dark-gray);
-    color: var(--white);
-    padding: 20px;
-    min-height: 150px;
-    box-sizing: border-box;
-    resize: none;
-  }
-
-  .flat-button {
-    color: var(--green);
-    background: 0 0;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-decoration: none;
-    padding: 8px 10px;
-    border: 1px solid var(--green);
-    float: right;
-    border-radius: 4px;
   }
 }

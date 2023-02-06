@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from "@emailjs/browser"
 import "./styles.scss"
+import { Title } from '../Title';
 
 export function Contact() {
   const [name, setName] = useState('')
@@ -34,22 +35,9 @@ export function Contact() {
   }
   return (
     <>
-      <div className="container contact-page">
+      <div className="contact-page">
         <div className="text-zone">
-          <h1>Contact Me</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-            praesentium tenetur itaque sapiente dignissimos laborum recusandae
-            itaque autem eos non laboriosam aspernatur!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-            praesentium tenetur itaque sapiente dignissimos.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-            praesentium tenetur itaque sapiente dignissimos.
-          </p>
+          <Title background='send message' title='Contact Me'/>
           <div className="contact-form">
             <form onSubmit={sendEmail}> 
               <ul>
